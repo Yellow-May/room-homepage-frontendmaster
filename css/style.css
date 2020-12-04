@@ -17,7 +17,7 @@ main.showcase {
   height: 100%;
   width: 100%;
   display: grid;
-  grid: 68% 32% / auto;
+  grid: 66% auto / auto;
 }
 
 main.showcase section {
@@ -25,7 +25,7 @@ main.showcase section {
 }
 
 main.showcase section:nth-child(1) {
-  grid: auto / 58% 42%;
+  grid: auto / 58% auto;
   position: relative;
 }
 
@@ -49,10 +49,22 @@ main.showcase section:nth-child(1) .section .img-section {
   width: 100%;
 }
 
-main.showcase section:nth-child(1) .section .img-section img {
+main.showcase section:nth-child(1) .section .img-section .img-box {
   position: sticky;
+  min-width: 100%;
   height: 100%;
-  width: 100%;
+}
+
+main.showcase section:nth-child(1) .section .img-section .img-box:first-child {
+  background: url(./../images/desktop-image-hero-3.jpg) no-repeat center center/cover;
+}
+
+main.showcase section:nth-child(1) .section .img-section .img-box:nth-child(2) {
+  background: url(./../images/desktop-image-hero-2.jpg) no-repeat center center/cover;
+}
+
+main.showcase section:nth-child(1) .section .img-section .img-box:last-child {
+  background: url(./../images/desktop-image-hero-1.jpg) no-repeat center center/cover;
 }
 
 main.showcase section:nth-child(1) .section .content-section {
@@ -139,8 +151,8 @@ main.showcase section:nth-child(1) .slider-btn {
   position: absolute;
   left: 58%;
   bottom: 0;
-  height: 3.5rem;
-  width: calc(69% - 58%);
+  height: 4.5rem;
+  width: calc(42% - 29%);
   background-color: black;
   display: flex;
 }
@@ -163,12 +175,15 @@ main.showcase section:nth-child(1) .slider-btn button:hover {
 }
 
 main.showcase section:nth-child(2) {
-  grid: auto / 29% 40% 31%;
+  grid: auto / 29% auto 29%;
 }
 
-main.showcase section:nth-child(2) img {
-  width: 100%;
-  height: 100%;
+main.showcase section:nth-child(2) .img-box:first-child {
+  background: url(./../images/image-about-dark.jpg) no-repeat center center/cover;
+}
+
+main.showcase section:nth-child(2) .img-box:last-child {
+  background: url(./../images/image-about-light.jpg) no-repeat center center/cover;
 }
 
 main.showcase section:nth-child(2) .text-content {
@@ -213,6 +228,15 @@ main.showcase section:nth-child(2) .text-content h1 {
   }
   main.showcase section:nth-child(1) {
     grid: repeat(2, 21rem)/auto;
+  }
+  main.showcase section:nth-child(1) .section .img-section .img-box:first-child {
+    background: url(./../images/mobile-image-hero-3.jpg) no-repeat center center/cover;
+  }
+  main.showcase section:nth-child(1) .section .img-section .img-box:nth-child(2) {
+    background: url(./../images/mobile-image-hero-2.jpg) no-repeat center center/cover;
+  }
+  main.showcase section:nth-child(1) .section .img-section .img-box:last-child {
+    background: url(./../images/mobile-image-hero-1.jpg) no-repeat center center/cover;
   }
   main.showcase section:nth-child(1) .desktop-nav {
     display: none;

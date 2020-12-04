@@ -10,6 +10,27 @@
       &:nth-child(1) {
         grid: repeat(2, 21rem) / auto;
 
+        .section {
+          .img-section {
+            .img-box {
+              &:first-child {
+                background: url(./../images/mobile-image-hero-3.jpg) no-repeat
+                  center center/cover;
+              }
+
+              &:nth-child(2) {
+                background: url(./../images/mobile-image-hero-2.jpg) no-repeat
+                  center center/cover;
+              }
+
+              &:last-child {
+                background: url(./../images/mobile-image-hero-1.jpg) no-repeat
+                  center center/cover;
+              }
+            }
+          }
+        }
+
         // desktop nav
         .desktop-nav {
           display: none;

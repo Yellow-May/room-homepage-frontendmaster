@@ -4,13 +4,13 @@ main.showcase {
   height: 100%;
   width: 100%;
   display: grid;
-  grid: 68% 32% / auto;
+  grid: 66% auto / auto;
 
   section {
     display: grid;
 
     &:nth-child(1) {
-      grid: auto / 58% 42%;
+      grid: auto / 58% auto;
       position: relative;
 
       .section {
@@ -31,10 +31,25 @@ main.showcase {
           height: 100%;
           width: 100%;
 
-          img {
+          .img-box {
             position: sticky;
+            min-width: 100%;
             height: 100%;
-            width: 100%;
+
+            &:first-child {
+              background: url(./../images/desktop-image-hero-3.jpg) no-repeat
+                center center/cover;
+            }
+
+            &:nth-child(2) {
+              background: url(./../images/desktop-image-hero-2.jpg) no-repeat
+                center center/cover;
+            }
+
+            &:last-child {
+              background: url(./../images/desktop-image-hero-1.jpg) no-repeat
+                center center/cover;
+            }
           }
         }
 
@@ -128,8 +143,8 @@ main.showcase {
         position: absolute;
         left: 58%;
         bottom: 0;
-        height: 3.5rem;
-        width: calc(69% - 58%);
+        height: 4.5rem;
+        width: calc(42% - 29%);
         background-color: $black;
 
         display: flex;
@@ -154,11 +169,18 @@ main.showcase {
     }
 
     &:nth-child(2) {
-      grid: auto / 29% 40% 31%;
+      grid: auto / 29% auto 29%;
 
-      img {
-        width: 100%;
-        height: 100%;
+      .img-box {
+        &:first-child {
+          background: url(./../images/image-about-dark.jpg) no-repeat center
+            center/cover;
+        }
+
+        &:last-child {
+          background: url(./../images/image-about-light.jpg) no-repeat center
+            center/cover;
+        }
       }
 
       .text-content {
