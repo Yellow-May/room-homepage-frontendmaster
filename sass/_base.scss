@@ -1,0 +1,26 @@
+// fonts
+$font-stack: Spartan, san-serif;
+$font-size: 75%;
+
+// primary colors
+$dark-gray: hsl(0, 0%, 63%);
+$black: hsl(0, 0, 0);
+$white: hsl(0, 0, 100%);
+$very-dark-gray: hsl(0, 0, 27%);
+
+// reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: $font-size;
+
+  height: 100vh;
+  width: 100%;
+}
